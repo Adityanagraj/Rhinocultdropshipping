@@ -51,7 +51,8 @@ Claims in features/FAQ (no MOQ, Shopify, COD, labels, returns) must be confirmed
 `index.html`
 1. Sticky dark header: white Rhinocult logo + "DROPSHIPPING" tag, nav (Products, How it works,
    Why us, FAQ), WhatsApp (outline pill) + Book a Call (solid pill), hamburger under 860px.
-2. Hero: copy left; right a circular white→black radial "spotlight" with two cut-out models.
+2. Hero: copy left; right a circular white→black radial "spotlight" with a man (`cat-oversized`)
+   and a woman (`cat-babytee`) cut-out, side by side and centred in the circle.
    Intro motion (CSS only): copy rises in with a stagger, spotlight scales in, models roll in from
    opposite sides then float, and a ring of brand text rotates around the spotlight. All motion is
    disabled under `prefers-reduced-motion`.
