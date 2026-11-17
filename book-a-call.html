@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Book a Call | Rhinocult Dropshipping</title>
+  <meta name="description" content="Book a free call with Rhinocult Dropshipping to start your custom clothing brand.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Rhinocult Dropshipping home">
+        <img src="assets/img/logo-white.webp" alt="Rhinocult" width="160" height="37">
+        <span class="brand-tag">Dropshipping</span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-outline btn-sm" href="index.html">Home</a>
+        <a class="btn btn-solid btn-sm" href="https://wa.me/916362990365" data-wa="Hi Rhinocult, I want to book a call." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section booking">
+    <div class="container booking-grid">
+      <div class="booking-intro">
+        <p class="eyebrow">Free consultation</p>
+        <h1>Book a call</h1>
+        <p class="lead">Tell us about your brand. We will confirm your slot on WhatsApp and walk you through products, pricing and samples.</p>
+        <ul class="checks">
+          <li>15 to 20 minute call with our team.</li>
+          <li>Product, fabric and print recommendations.</li>
+          <li>Sample and launch plan for your brand.</li>
+        </ul>
+        <img class="booking-image" src="assets/img/portrait-men.webp" alt="Model in oversized brown tee" width="900" height="1125">
+      </div>
+
+      <form class="booking-form" id="booking-form" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="brand">Brand name</label>
+          <input id="brand" name="brand" type="text" placeholder="Leave blank if you are just starting">
+        </div>
+        <div class="field">
+          <label for="phone">Phone / WhatsApp number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+ ]{10,15}" placeholder="+91 98765 43210" required>
+        </div>
+        <fieldset class="field">
+          <legend>Products you are interested in</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="products" value="T-Shirts"> T-Shirts</label>
+            <label><input type="checkbox" name="products" value="Hoodies"> Hoodies</label>
+            <label><input type="checkbox" name="products" value="Sweatshirts"> Sweatshirts</label>
+            <label><input type="checkbox" name="products" value="Baby Tees"> Baby Tees</label>
+            <label><input type="checkbox" name="products" value="Tank Tops"> Tank Tops</label>
+            <label><input type="checkbox" name="products" value="Cut & Sew"> Cut &amp; Sew</label>
+          </div>
+        </fieldset>
+        <div class="field-row">
+          <div class="field">
+            <label for="date">Preferred date</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="slot">Preferred time</label>
+            <select id="slot" name="slot" required>
+              <option value="">Select a slot</option>
+              <option>10:00 AM - 12:00 PM</option>
+              <option>12:00 PM - 2:00 PM</option>
+              <option>2:00 PM - 4:00 PM</option>
+              <option>4:00 PM - 6:00 PM</option>
+              <option>6:00 PM - 8:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="notes">Anything else?</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Your idea, store link, expected monthly orders..."></textarea>
+        </div>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <button class="btn btn-solid btn-block" type="submit">Confirm on WhatsApp</button>
+        <p class="form-note">Submitting opens WhatsApp with your details filled in. Just press send.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer-compact">
+    <div class="container footer-bottom">
+      <img src="assets/img/logo-white.webp" alt="Rhinocult" width="140" height="32">
+      <p>Rhinocult Dropshipping &middot; &copy; <span data-year>2026</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
