@@ -11,6 +11,35 @@ document.querySelectorAll("[data-wa]").forEach((el) => {
   el.setAttribute("href", waLink(el.dataset.wa));
 });
 
+// Product cards: colour swatches swap the image and rewrite the "Customize now" WhatsApp message.
+document.querySelectorAll(".product-card[data-specs]").forEach((card) => {
+  const img = card.querySelector(".product-img");
+  const colourName = card.querySelector("[data-colour-name]");
+  const cta = card.querySelector(".product-cta");
+  const swatches = card.querySelectorAll(".swatch");
+  const { product, specs } = card.dataset;
+
+  const select = (swatch) => {
+    const colour = swatch.dataset.colour;
+    swatches.forEach((s) => s.setAttribute("aria-checked", String(s === swatch)));
+    img.src = swatch.dataset.img;
+    img.alt = `${product} in ${colour}`;
+    colourName.textContent = colour;
+    cta.href = waLink([
+      `Hi Rhinocult, I want to customise ${product}s for my brand.`,
+      "",
+      `Product: ${product}`,
+      `Colour: ${colour}`,
+      `Specs: ${specs}`,
+      "",
+      "Please share print options, pricing and next steps.",
+    ].join("\n"));
+  };
+
+  swatches.forEach((swatch) => swatch.addEventListener("click", () => select(swatch)));
+  select(card.querySelector('.swatch[aria-checked="true"]') || swatches[0]);
+});
+
 document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = String(new Date().getFullYear());
 });

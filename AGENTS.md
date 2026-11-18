@@ -29,6 +29,7 @@ tank tops and cut & sew pieces under the client's label and ships to their custo
 | `styles.css` | All styles. Design tokens are CSS variables in `:root` at the top |
 | `script.js` | WhatsApp number config, `data-wa` link builder, mobile menu, booking form logic |
 | `assets/img/` | Optimised WebP images taken from rhinocult.com, plus `favicon.png` |
+| `assets/img/catalog/` | 35 transparent flat garment images, one per product colour, from the 2027 catalogue PDF (`<product>-<colour>.webp`) |
 | `llm.md` | Portable brand/content/design brief for any LLM |
 
 ## Run locally
@@ -50,6 +51,33 @@ Opening `index.html` directly from the file system also works.
   **If you change the number, update `CONFIG.whatsappNumber` and search/replace `916362990365` in the
   HTML files**, and update the visible footer number `+91 63629 90365`.
 - To add a new WhatsApp CTA: `<a href="https://wa.me/916362990365" data-wa="Hi Rhinocult, ..." target="_blank" rel="noopener">`.
+
+## Product cards (collection section)
+
+Source of truth for products, colours, hex codes, GSM and sizes: the RhinoCult 2027 catalogue
+(summarised in `llm.md` section 2). Each card in `#products` looks like:
+
+```html
+<article class="product-card" data-product="Hoodie" data-specs="330 GSM polycotton fleece · Regular fit, unisex · S–XXL">
+  <img class="product-img" src="assets/img/catalog/hoodie-black.webp" ...>
+  <strong data-colour-name>Black</strong>
+  <div class="swatches" role="radiogroup">
+    <button class="swatch" role="radio" aria-checked="true" style="--swatch: #1B1B1E"
+            data-colour="Black" data-img="assets/img/catalog/hoodie-black.webp"></button>
+    ...
+  </div>
+  <a class="btn btn-solid btn-block product-cta" href="https://wa.me/916362990365" data-wa="...">Customize now</a>
+</article>
+```
+
+`script.js` wires every `.product-card[data-specs]`: clicking a swatch sets `aria-checked`, swaps the
+image and colour label, and rewrites the CTA to a WhatsApp message with product, colour and specs.
+
+- Add a colour: export a transparent 480×570 WebP to `assets/img/catalog/<product>-<colour>.webp` and
+  add a `.swatch` button. Add class `swatch-acid` for acid-wash shades. Update the colour count text.
+- Add a product: copy a whole `<article>`; set `data-product` (singular name) and `data-specs`.
+- Swatch hex values are product data and are the only allowed inline colours.
+- The Cut & Sew card (`.product-card-custom`) has no swatches and a fixed message.
 
 ## Book a Call flow
 
@@ -83,6 +111,10 @@ for Rhinocult. Edit them in
 - Returns management, fast dispatch, dedicated POC.
 - Booking call length (15–20 min) and the time slots (10 AM – 8 PM).
 
+Facts that ARE confirmed by the 2027 catalogue (safe to use): product range, colours, GSM, fits and
+sizes; in-house screen/puff/DTF/DTG/sublimation/embroidery; 3,000 pcs/day; Nelamangala, Bengaluru
+unit; PAN India dispatch; 500+ brands, 500+ corporate orders, 5,000+ products delivered.
+
 Policy links in the footer point to rhinocult.com's retail policies. Replace them with dropshipping-
 specific policies when available.
 
@@ -95,5 +127,6 @@ Cloudflare Pages, GitHub Pages, or Shopify page embed. No environment variables 
 
 1. Serve locally and load `/` and `/book-a-call.html` without console errors.
 2. Check desktop (1440px) and mobile (390px) widths; open and close the mobile menu.
-3. Click a product card and a CTA: the WhatsApp URL must include the encoded prefilled message.
+3. On a product card, pick a swatch: the image and colour label change, and **Customize now** opens
+   WhatsApp with product, colour and specs. Other CTAs must also carry an encoded prefilled message.
 4. Submit the booking form empty (error shows) and filled (WhatsApp opens with all fields).
