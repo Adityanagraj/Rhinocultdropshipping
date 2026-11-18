@@ -146,7 +146,7 @@ with all details prefilled.
 | File | Content | Used in |
 | --- | --- | --- |
 | `catalog/*.webp` | 35 transparent ghost-mannequin garment photos, 720×855, one per product colour | collection cards |
-| `feature-launch.webp`, `feature-label.webp`, `feature-logistics.webp` | Founder getting an order on his phone; custom neck label + hang tag; packing desk with courier mailers (AI-generated, 768×1024) | feature rows |
+| `feature-launch.webp`, `feature-label.webp`, `feature-logistics.webp` | Founder smiling at a new order on his phone; custom neck label + hang tag; worker stacking parcels in a dispatch unit (AI-generated, 768×1024) | feature rows |
 | `logo-white.webp`, `logo-black.webp` | RHINOCULT wordmark | header/footer (white) |
 | `logo-banner.webp` | Rhino head logo on black | og:image |
 | `favicon.png` | Rhino head icon | favicon |
