@@ -40,10 +40,6 @@ document.querySelectorAll(".product-card[data-specs]").forEach((card) => {
   select(card.querySelector('.swatch[aria-checked="true"]') || swatches[0]);
 });
 
-document.querySelectorAll("[data-year]").forEach((el) => {
-  el.textContent = String(new Date().getFullYear());
-});
-
 // Mobile menu
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.getElementById("site-nav");
