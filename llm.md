@@ -145,14 +145,19 @@ with all details prefilled.
 
 | File | Content | Used in |
 | --- | --- | --- |
-| `catalog/*.webp` | 35 transparent flat garment images, 480×570, one per product colour (from the catalogue PDF) | collection cards |
+| `catalog/*.webp` | 35 transparent ghost-mannequin garment photos, 720×855, one per product colour | collection cards |
+| `feature-launch.webp`, `feature-label.webp`, `feature-logistics.webp` | Founder getting an order on his phone; custom neck label + hang tag; packing desk with courier mailers (AI-generated, 768×1024) | feature rows |
 | `logo-white.webp`, `logo-black.webp` | RHINOCULT wordmark | header/footer (white) |
 | `logo-banner.webp` | Rhino head logo on black | og:image |
 | `favicon.png` | Rhino head icon | favicon |
 | `cat-oversized.webp`, `cat-essential.webp` (+ other `cat-*`) | Transparent full-body model cut-outs, 700×1400 | hero |
-| `hoodie-white.webp`, `tee-oversized.webp`, `sweatshirt.webp` | Couple product shots | feature rows |
 | `hoodie-embroidered*.webp`, `tee-essential.webp`, `babytee.webp`, `tank.webp`, `portrait-*.webp` | Product/model shots | lookbook, Cut & Sew card, booking page |
 | `street-group.webp` | Night street group shot with "WEAR THE ATTITUDE" text | street banner |
+
+Catalogue garment photos were made from one AI-generated light-grey blank per product (plus an
+acid-wash blank for tank and baby top), cut out, then recoloured in Lab space to each catalogue hex,
+so every colour of a product has the identical silhouette. New colours must follow the same recipe.
+Feature-row images must illustrate the row's copy, not just show product.
 
 Model cut-outs must keep the `cat-*` framing (transparent, full body, 700×1400, figure spans full
 height). `cat-essential.webp` was made from a Rhino Cult product photo with the background removed

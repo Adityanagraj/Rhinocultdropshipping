@@ -73,7 +73,7 @@ Source of truth for products, colours, hex codes, GSM and sizes: the RhinoCult 2
 `script.js` wires every `.product-card[data-specs]`: clicking a swatch sets `aria-checked`, swaps the
 image and colour label, and rewrites the CTA to a WhatsApp message with product, colour and specs.
 
-- Add a colour: export a transparent 480×570 WebP to `assets/img/catalog/<product>-<colour>.webp` and
+- Add a colour: export a transparent 720×855 WebP (same recolour recipe as `llm.md` section 8) to `assets/img/catalog/<product>-<colour>.webp` and
   add a `.swatch` button. Add class `swatch-acid` for acid-wash shades. Update the colour count text.
 - Add a product: copy a whole `<article>`; set `data-product` (singular name) and `data-specs`.
 - Swatch hex values are product data and are the only allowed inline colours.
