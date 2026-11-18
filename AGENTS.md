@@ -29,7 +29,7 @@ tank tops and cut & sew pieces under the client's label and ships to their custo
 | `styles.css` | All styles. Design tokens are CSS variables in `:root` at the top |
 | `script.js` | WhatsApp number config, `data-wa` link builder, mobile menu, booking form logic |
 | `assets/img/` | Optimised WebP images taken from rhinocult.com, plus `favicon.png` |
-| `assets/img/catalog/` | 35 transparent flat garment images, one per product colour, from the 2027 catalogue PDF (`<product>-<colour>.webp`) |
+| `assets/img/catalog/` | 36 transparent garment photos, one per product colour (`<product>-<colour>.webp`) |
 | `llm.md` | Portable brand/content/design brief for any LLM |
 
 ## Run locally
@@ -77,7 +77,7 @@ image and colour label, and rewrites the CTA to a WhatsApp message with product,
   add a `.swatch` button. Add class `swatch-acid` for acid-wash shades. Update the colour count text.
 - Add a product: copy a whole `<article>`; set `data-product` (singular name) and `data-specs`.
 - Swatch hex values are product data and are the only allowed inline colours.
-- The Cut & Sew card (`.product-card-custom`) has no swatches and a fixed message.
+- Cargo Pants data comes from Rhino Cult's Myntra listings (black only), not the catalogue.
 
 ## Book a Call flow
 
