@@ -115,6 +115,10 @@ Facts that ARE confirmed by the 2027 catalogue (safe to use): product range, col
 sizes; in-house screen/puff/DTF/DTG/sublimation/embroidery; 3,000 pcs/day; Nelamangala, Bengaluru
 unit; PAN India dispatch; 500+ brands, 500+ corporate orders, 5,000+ products delivered.
 
+Official address (footer `<address>`, from https://rhinocult.com/pages/contact and
+https://corporate.rhinocult.com): 1838, Jayamahal, Taluk Office Road, Opp. Deepasri Hostel,
+Nelamangala, Bengaluru Rural, Karnataka 562123. The catalogue's "No. 2500, Market Road" address is wrong.
+
 Policy links in the footer point to rhinocult.com's retail policies. Replace them with dropshipping-
 specific policies when available.
 

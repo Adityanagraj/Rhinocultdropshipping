@@ -43,8 +43,10 @@ Each colour has a flat garment image at `assets/img/catalog/<product>-<colour-sl
 
 ## 3. Manufacturing facts (from the catalogue)
 
-- Everything in-house at one unit: No. 2500, Ground Floor, Opp. Jayadeva Hostel, Market Road,
-  Nelamangala, Bengaluru 562123.
+- Everything in-house at one unit in Nelamangala, Bengaluru Rural.
+- Official address (registered and operational, from rhinocult.com/pages/contact and
+  corporate.rhinocult.com): 1838, Jayamahal, Taluk Office Road, Opp. Deepasri Hostel, Nelamangala,
+  Bengaluru Rural, Karnataka 562123. Do not use the old catalogue address (No. 2500, Market Road).
 - Chain: fabric sourcing → cutting → stitching → print/embroidery → QC & packing → warehouse → dispatch.
 - 3,000 pieces produced per day; 2,000+ pieces' worth of fabric stocked per colour (consistent shades).
 - 6 print & branding methods in-house: screen print, puff print, DTF, DTG, sublimation, embroidery.
@@ -58,6 +60,7 @@ Each colour has a flat garment image at `assets/img/catalog/<product>-<colour-sl
 | --- | --- |
 | WhatsApp / helpdesk | +91 63629 90365 → `https://wa.me/916362990365` |
 | Email | rhinocult2023@gmail.com |
+| Address | 1838, Jayamahal, Taluk Office Road, Opp. Deepasri Hostel, Nelamangala, Bengaluru Rural, Karnataka 562123 |
 | Instagram | https://www.instagram.com/rhinocultindia/ |
 | X / Twitter | https://x.com/Rhinocultindia |
 | Facebook | https://m.facebook.com/61553896797858/ |
@@ -146,7 +149,7 @@ with all details prefilled.
 | File | Content | Used in |
 | --- | --- | --- |
 | `catalog/*.webp` | 35 transparent ghost-mannequin garment photos, 720×855, one per product colour | collection cards |
-| `feature-launch.webp`, `feature-label.webp`, `feature-logistics.webp` | Founder smiling at a new order on his phone; custom neck label + hang tag; worker stacking parcels in a dispatch unit (AI-generated, 768×1024) | feature rows |
+| `feature-launch.webp`, `feature-label.webp`, `feature-logistics.webp` | Founder smiling at a new order on his phone; neck label being stitched on, with hang tags; worker stacking parcels in a dispatch unit (AI-generated, 768×1024) | feature rows |
 | `logo-white.webp`, `logo-black.webp` | RHINOCULT wordmark | header/footer (white) |
 | `logo-banner.webp` | Rhino head logo on black | og:image |
 | `favicon.png` | Rhino head icon | favicon |
